@@ -27,6 +27,7 @@
 
 .video-caption {
     margin-top: 10px;
+    text-align: center;
 }
 
 .video-container p {
@@ -38,4 +39,22 @@
     text-align: center;
     padding: 15px;
     background: #f2f2f2;
+}
+
+@media (max-width: 576px) {
+    .video-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .video-container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .video-container {
+        width: 33.33%;
+    }
 }

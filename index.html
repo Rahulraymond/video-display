@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video site</title>
+    <title>Video Site</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.plyr.io/3.6.4/plyr.css" rel="stylesheet">
-    <link href="./styles.css" rel="stylesheet">
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -17,66 +14,34 @@
 
 <div class="container">
     <div class="row">
+        <!-- Include YouTube videos using iframe -->
         <div class="col-lg-4 col-md-6 col-sm-12 video-container">
-            <!-- Video 1 -->
-            <video id="video1" controls>
-                <source src="https://v3.cdnpk.net/videvo_files/video/free/2012-08/large_watermarked/hd0029_preview.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="video-caption">Video 1 Caption</p>
-            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2012-08/large_watermarked/hd0029_preview.mp4')">Share</a>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/7fVE0UZ8snU" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <p class="video-caption">YouTube Video 1 Caption</p>
+            <a class="share-button" onclick="shareVideo('https://www.youtube.com/watch?v=7fVE0UZ8snU')">Share</a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 video-container">
-            <!-- Video 2 -->
-            <video id="video2" controls>
-                <source src="https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="video-caption">Video 2 Caption</p>
-            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4')">Share</a>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/LbwwwXkVaiI" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <p class="video-caption">YouTube Video 2 Caption</p>
+            <a class="share-button" onclick="shareVideo('https://www.youtube.com/watch?v=LbwwwXkVaiI')">Share</a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 video-container">
-            <!-- Video 3 -->
-            <video id="video3" controls>
-                <source src="https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="video-caption">Video 3 Caption</p>
-            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4')">Share</a>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/KLDR9cHsU-s" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <p class="video-caption">YouTube Video 3 Caption</p>
+            <a class="share-button" onclick="shareVideo('https://www.youtube.com/watch?v=KLDR9cHsU-s')">Share</a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 video-container">
-            <!-- Video 4 -->
-            <video id="video4" controls>
-                <source src="https://v3.cdnpk.net/videvo_files/video/free/2012-08/large_watermarked/hd0029_preview.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="video-caption">Video 4 Caption</p>
-            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2012-08/large_watermarked/hd0029_preview.mp4')">Share</a>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/k0na6U0Umg0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <p class="video-caption">YouTube Video 4 Caption</p>
+            <a class="share-button" onclick="shareVideo('https://www.youtube.com/watch?v=k0na6U0Umg0')">Share</a>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 video-container">
-            <!-- Video 5 -->
-            <video id="video5" controls>
-                <source src="https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="video-caption">Video 5 Caption</p>
-            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4')">Share</a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 video-container">
-            <!-- Video 6-->
-            <video id="video6" controls>
-                <source src="https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="video-caption">Video 6 Caption</p>
-            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4')">Share</a>
-        </div>
+        <!-- Add more video containers as needed -->
     </div>
 </div>
 
 <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
 <script>
-    const players = Array.from(document.querySelectorAll('video')).map(player => new Plyr(player));
+    const players = Array.from(document.querySelectorAll('video, iframe')).map(player => new Plyr(player));
 
     function shareVideo(videoUrl) {
         if (navigator.share) {
