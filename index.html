@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video Page with Share Button</title>
+    <title>Video site</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.plyr.io/3.6.4/plyr.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <style>
+
+    </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="row">
-       <!DOCTYPE html>
-<html>
-<head>
-    <title>Video Page with Share Button</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.plyr.io/3.6.4/plyr.css" rel="stylesheet">
-    <link href="./styles.css" rel="stylesheet" >
-</head>
-<body>
+<div class="brand-header">
+    <h1>Brand Name</h1>
+</div>
 
 <div class="container">
     <div class="row">
@@ -48,61 +44,33 @@
             <p class="video-caption">Video 3 Caption</p>
             <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4')">Share</a>
         </div>
-    </div>
-</div>
-
-<div class="col-lg-4 col-md-6 col-sm-12 video-container">
-    <!-- Video 4 -->
-    <video id="video1" controls>
-        <source src="https://v3.cdnpk.net/videvo_files/video/free/2012-08/large_watermarked/hd0029_preview.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <p class="video-caption">Video 1 Caption</p>
-    <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2012-08/large_watermarked/hd0029_preview.mp4')">Share</a>
-</div>
-<div class="col-lg-4 col-md-6 col-sm-12 video-container">
-    <!-- Video 5 -->
-    <video id="video2" controls>
-        <source src="https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <p class="video-caption">Video 5 Caption</p>
-    <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4')">Share</a>
-</div>
-<div class="col-lg-4 col-md-6 col-sm-12 video-container">
-    <!-- Video  6-->
-    <video id="video3" controls>
-        <source src="https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <p class="video-caption">Video 6 Caption</p>
-    <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4')">Share</a>
-</div>
-</div>
-</div>
-
-<script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
-<script>
-    const players = Array.from(document.querySelectorAll('video')).map(player => new Plyr(player));
-
-    function shareVideo(videoUrl) {
-        if (navigator.share) {
-            navigator.share({
-                title: 'Check out this video!',
-                text: 'Video link: ' + videoUrl,
-                url: videoUrl,
-            })
-            .then(() => console.log('Successful share'))
-            .catch((error) => console.log('Error sharing:', error));
-        } else {
-            alert('Sharing functionality is not supported on this browser. You can manually share the video link.');
-        }
-    }
-</script>
-
-</body>
-</html>
-
+        <div class="col-lg-4 col-md-6 col-sm-12 video-container">
+            <!-- Video 4 -->
+            <video id="video4" controls>
+                <source src="https://v3.cdnpk.net/videvo_files/video/free/2012-08/large_watermarked/hd0029_preview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="video-caption">Video 4 Caption</p>
+            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2012-08/large_watermarked/hd0029_preview.mp4')">Share</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 video-container">
+            <!-- Video 5 -->
+            <video id="video5" controls>
+                <source src="https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="video-caption">Video 5 Caption</p>
+            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4')">Share</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 video-container">
+            <!-- Video 6-->
+            <video id="video6" controls>
+                <source src="https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="video-caption">Video 6 Caption</p>
+            <a class="share-button" onclick="shareVideo('https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0903_preview.mp4')">Share</a>
+        </div>
     </div>
 </div>
 

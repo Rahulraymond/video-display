@@ -1,30 +1,41 @@
-.container{
-    margin-top: 20px  !important;
+.container {
+    margin-top: 20px !important;
     margin: 0 auto;
 }
 
-.video-container{
+.video-container {
     margin-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
+
 .share-button {
-    display: inline-block;
+    display: block;
     background: #337ab7;
     color: #fff;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 10px;
-    cursor: pointer;
     text-align: center;
+}
 
-}
-.share-button:hover{
+.share-button:hover {
     background: #337a;
-    color:#fff !important;
+    color: #fff !important;
 }
+
 .video-caption {
     margin-top: 10px;
 }
- .video-container p{
-    display: inline-block;
- }
+
+.video-container p {
+    display: block;
+    text-align: center;
+}
+
+.brand-header {
+    text-align: center;
+    padding: 15px;
+    background: #f2f2f2;
+}
